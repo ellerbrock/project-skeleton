@@ -19,16 +19,12 @@
 #
 #   Twitter       https://twitter.com/frapsoft
 #   Facebook      https://facebook.com/frapsoft
+#   Github	  https://github.com/frapsoft
 #   Homepage      https://frapsoft.com
 #
-#   Version       1.0.0
+#   Version       1.0.1
 #
 
-#
-#   Todo:
-#
-#   add .gitgnore, .npmignore
-#   autpgen .nvmvrc
 
 # Configuration
 error=false
@@ -125,7 +121,7 @@ else
 fi
 
 if [[ $error == false ]]; then
-    echo "creating skeletong with $licenceMsg"
+    echo "creating skeleton with $licenceMsg"
 
     if [[ $haveLicence == true ]]; then
       cat $inFile $contactTpl $licenceTpl > $outFile
