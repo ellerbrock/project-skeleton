@@ -19,10 +19,16 @@
 #
 #   Twitter       https://twitter.com/frapsoft
 #   Facebook      https://facebook.com/frapsoft
-#   Github	  https://github.com/frapsoft
+#   Github	      https://github.com/frapsoft
 #   Homepage      https://frapsoft.com
 #
-#   Version       1.0.1
+#   Version       1.0.2
+#
+#
+#   Install Dependencies:
+#   ---------------------
+#
+#   npm install tidy-markdown -g
 #
 
 
@@ -124,7 +130,7 @@ if [[ $error == false ]]; then
     echo "creating skeleton with $licenceMsg"
 
     if [[ $haveLicence == true ]]; then
-      cat $inFile $contactTpl $licenceTpl > $outFile
+      cat $inFile $contactTpl $licenceTpl | tidy-markdown > $outFile
       cp $licenceFile $outLicence
       cp "$tmpDir/dotfiles/.gitignore" .gitignore
 
